@@ -1,21 +1,31 @@
-#import urllib2, sys
-#from BeautifulSoup import BeautifulSoup
-#
-param_constants = {'id': '',
-                   'key': '',
-                   'ip_address': '',
-                   'user_agent': '',  # web browser?
-                   'format' : '',
-                    'v' : ''
-}
+# https://www.glassdoor.com/developer/index.htm
+
+from requests import get
+from utils import Utils
+from bs4 import BeautifulSoup
+
+
+def get_ip_user_agent(soup_page):
+    paragraphs = soup.find_all(text=True)
+    print(type(paragraphs))
+    ip = ''
+    user_agent = ''
+    for p in paragraphs:
+        if "python" in p:
+            user_agent = p
+        if 'My IP Address' in p:
+            parse_result = str(p).split(": ")
+            ip = parse_result[1]
+
+    return ip, user_agent
 
 
 def build_url():
     base_url = 'http://api.glassdoor.com/api/api.htm'
-    query_params = f"t.p={param_constants['id']}" \
-                   f"&t.k={param_constants['key']}" \
-                   f"&userip={param_constants['ip_address']}" \
-                   f"&useragent={param_constants['user_agent']}" \
+    query_params = f"t.p={config['id']}" \
+                   f"&t.k={config['key']}" \
+                   f"&userip={ip}" \
+                   f"&useragent={user_agent}" \
                    f"&format=json" \
                    f"&v=1" \
                    f"&action=employers" \
@@ -26,10 +36,10 @@ def build_url():
     return final_url
 
 
+# variables for requests
+config = Utils.config
+page = get('http://whatsmyuseragent.org/')
+soup = BeautifulSoup(page.text, 'lxml')
+ip, user_agent = get_ip_user_agent(soup)
+
 url = build_url()
-
-
-#hdr = {'User-Agent': 'Mozilla/5.0'}
-#req = urllib2.Request(url,headers=hdr)
-#response = urllib2.urlopen(req)
-#soup = BeautifulSoup(response)
