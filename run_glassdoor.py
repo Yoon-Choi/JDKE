@@ -34,6 +34,6 @@ key = config.get("key")
 #ip, useragent from website
 page = get('http://whatsmyuseragent.org/')
 soup = BeautifulSoup(page.text, 'lxml')
-ip, user_agent = get_ip_user_agent(soup)
-
+ip, user_agent = Get_ip_user_agent(soup)
+#final_url
 url = build_url(id, key, ip, user_agent)
