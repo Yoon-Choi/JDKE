@@ -1,7 +1,7 @@
 # https://www.glassdoor.com/developer/index.htm
 
 # import json
-from requests import get
+import requests
 from utils import Utils
 from bs4 import BeautifulSoup
 
@@ -12,7 +12,7 @@ def get_ip_user_agent(soup_page):
     ip = ''
     user_agent = ''
     for p in paragraphs:
-        if "python" in p:
+        if "Mozila" in p:
             user_agent = p
         if 'My IP Address' in p:
             parse_result = str(p).split(": ")
@@ -21,10 +21,10 @@ def get_ip_user_agent(soup_page):
     return ip, user_agent
 
 
-def build_url():
+def build_url(id, key, ip, user_agent):
     base_url = 'http://api.glassdoor.com/api/api.htm'
-    query_params = f"t.p={config['id']}" \
-                   f"&t.k={config['key']}" \
+    query_params = f"t.p={id}" \
+                   f"&t.k={key}" \
                    f"&userip={ip}" \
                    f"&useragent={user_agent}" \
                    f"&format=json" \
@@ -37,11 +37,15 @@ def build_url():
     return final_url
 
 
-# variables for requests
+#### variables for requests ####
+#id, key from json
 Utils  = Utils()
 config = Utils.config
+id = config.get("id")
+key = config.get("key")
+#ip, useragent from website
 page = get('http://whatsmyuseragent.org/')
 soup = BeautifulSoup(page.text, 'lxml')
 ip, user_agent = get_ip_user_agent(soup)
 
-url = build_url()
+url = build_url(id, key, ip, user_agent)
