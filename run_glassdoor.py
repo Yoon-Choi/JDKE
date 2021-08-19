@@ -38,6 +38,7 @@ def build_url():
 
 
 # variables for requests
+Utils  = Utils()
 config = Utils.config
 page = get('http://whatsmyuseragent.org/')
 soup = BeautifulSoup(page.text, 'lxml')
