@@ -2,23 +2,11 @@
 
 # import json
 import requests
-from utils import Utils
 from bs4 import BeautifulSoup
 
+from get_ip_user_agent import Get_ip_user_agent
+from utils import Utils
 
-def get_ip_user_agent(soup_page):
-    paragraphs = soup.find_all(text=True)
-    print(type(paragraphs))
-    ip = ''
-    user_agent = ''
-    for p in paragraphs:
-        if "Mozila" in p:
-            user_agent = p
-        if 'My IP Address' in p:
-            parse_result = str(p).split(": ")
-            ip = parse_result[1]
-
-    return ip, user_agent
 
 
 def build_url(id, key, ip, user_agent):
