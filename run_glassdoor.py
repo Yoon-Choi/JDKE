@@ -11,6 +11,7 @@ from utils import Utils
 
 def build_url(id, key, ip, user_agent):
     base_url = 'http://api.glassdoor.com/api/api.htm'
+
     query_params = f"t.p={id}" \
                    f"&t.k={key}" \
                    f"&userip={ip}" \
@@ -21,7 +22,7 @@ def build_url(id, key, ip, user_agent):
                    f"&q="
     final_url = f'{base_url}?{query_params}'
 
-    print(f'Just built this url! \nHer it is:\n{final_url}')
+    print(f'Just built this url! \nHer it is the response from glassdoor :\n{final_url}')
     return final_url
 
 
@@ -31,15 +32,17 @@ Utils  = Utils()
 config = Utils.get_config()
 id = config.get("id")
 key = config.get("key")
+
 #ip, useragent from website
 page = requests.get('http://whatsmyuseragent.org/')
-
 soup = BeautifulSoup(page.text, 'lxml')
 ip, user_agent = Get_ip_user_agent(soup)
 
-#response
+#checking the components
+print(f"your id(e-mail address) : {id} \n"
+      f"your key(password) : {key}\n"
+      f"your ip : {ip}\n"
+      f"your user_agent : {user_agent}\n")
+
+#response from api
 url = build_url(id, key, ip, user_agent)
-
-
-#get reponse from api
-
