@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-def Get_ip_user_agent(soup_page):
+def Get_ip_user_agent(soup):
     paragraphs = soup.find_all(text=True)
     print(type(paragraphs))
     ip = ''

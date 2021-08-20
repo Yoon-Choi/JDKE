@@ -28,12 +28,18 @@ def build_url(id, key, ip, user_agent):
 #### variables for requests ####
 #id, key from json
 Utils  = Utils()
-config = Utils.config
+config = Utils.get_config()
 id = config.get("id")
 key = config.get("key")
 #ip, useragent from website
-page = get('http://whatsmyuseragent.org/')
+page = requests.get('http://whatsmyuseragent.org/')
+
 soup = BeautifulSoup(page.text, 'lxml')
 ip, user_agent = Get_ip_user_agent(soup)
-#final_url
+
+#response
 url = build_url(id, key, ip, user_agent)
+
+
+#get reponse from api
+
