@@ -1,5 +1,5 @@
 # https://www.glassdoor.com/developer/index.htm
-
+#순서가 중요한 것 같아 보인다
 # import json
 import requests
 from bs4 import BeautifulSoup
@@ -37,6 +37,9 @@ key = config.get("key")
 page = requests.get('http://whatsmyuseragent.org/')
 soup = BeautifulSoup(page.text, 'lxml')
 ip, user_agent = Get_ip_user_agent(soup)
+
+
+
 
 #checking the components
 print(f"your id(e-mail address) : {id} \n"
