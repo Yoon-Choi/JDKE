@@ -1,6 +1,6 @@
 #### junior data anlyst position : extracted for only one page ####
 #https://www.glassdoor.com/Job/berlin-junior-data-analyst-jobs-SRCH_IL.0,6_IC2622109_KO7,26.htm?srs=JOBS_HOME_RECENT_SEARCHES
-# company name, position, location, job age(uploaded date)
+# extracted 4 components: company name, position, location, job age(uploaded date)
 
 ##reference##
 # https://www.youtube.com/watch?v=3tUUVenpxbc&t=25s
@@ -52,7 +52,7 @@ print("length of list : ", len(company_name))
 print("\nposition : ", position_name)
 print("length of list : ", len(position_name))
 
-#location
+#location name
 print("\nlocation name : ", location_name)
 print("length of list : ", len(location_name))
 #job age
