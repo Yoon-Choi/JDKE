@@ -2,7 +2,7 @@
 /venv/
 config
 /config.json
-.idea
+/.idea/
 .iml
 
 
