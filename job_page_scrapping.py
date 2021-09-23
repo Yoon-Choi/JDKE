@@ -1,4 +1,4 @@
-#### junior data anlyst position : extracted for only one page ####
+#### : only one page extraction : junior data analyst position ####
 # https://www.glassdoor.com/Job/berlin-junior-data-analyst-jobs-SRCH_IL.0,6_IC2622109_KO7,26.htm?srs=JOBS_HOME_RECENT_SEARCHES
 # extracted 4 components: company name, position, location, job age(uploaded date)
 
@@ -6,16 +6,19 @@
 # https://www.youtube.com/watch?v=3tUUVenpxbc&t=25s
 # https://www.youtube.com/watch?v=XVv6mJpFOb0&t=3445s
 # https://www.youtube.com/watch?v=ng2o98k983k&t=6s
-import csv
 
+import csv
 import requests
 from bs4 import BeautifulSoup
+
+# import pandas as pd
+# import time
 
 # useragent and request for webpage
 hdr = {
     'User-Agent': 'Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,like Gecko)Chrome/92.0.4515.159Safari/537.36'}
 html = requests.get(
-    'https://www.glassdoor.com/Job/berlin-junior-data-analyst-jobs-SRCH_IL.0,6_IC2622109_KO7,26.htm?srs=JOBS_HOME_RECENT_SEARCHES',
+    ' https://www.glassdoor.com/Job/berlin-junior-data-analyst-jobs-SRCH_IL.0,6_IC2622109_KO7,26.htm?srs=JOBS_HOME_RECENT_SEARCHES',
     headers=hdr)
 
 # response checking
@@ -68,8 +71,8 @@ for container in containers:
 # print('\n\n"consistency checking"')
 # print(company_name[3], '\n', position_name[3], '\n', location_name[3], '\n', job_age[3])
 
-################# write data : csv ##################################
-with open('job-list.csv', mode='w',  encoding='utf8') as myfile:
+## write data : csv
+with open('job-list.csv', mode='w', encoding='utf8') as myfile:
     wr = csv.writer(myfile)
     for data in range(len(company_name)):
         wr.writerow([company_name[data], position_name[data], location_name[data], job_age[data]])

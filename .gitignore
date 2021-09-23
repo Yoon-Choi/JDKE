@@ -6,7 +6,7 @@ config
 .iml
 
 
-ip_user_agent_page.txt
-practice_run_glassdoor.py
-practice_get_ip_user_agent.py
+/ip_user_agent_page.txt
+/practice_run_glassdoor.py
+/practice_get_ip_user_agent.py
 

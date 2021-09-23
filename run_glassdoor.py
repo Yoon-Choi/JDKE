@@ -9,6 +9,7 @@ from utils import Utils
 
 
 
+
 def build_url(id, key, ip, user_agent):
     base_url = 'http://api.glassdoor.com/api/api.htm'
 

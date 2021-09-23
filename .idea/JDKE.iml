@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/.gitignore">
       <sourceFolder url="file://$MODULE_DIR$/.gitignore" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/.idea" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/README.md">
       <sourceFolder url="file://$MODULE_DIR$/README.md" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/config.json">
       <sourceFolder url="file://$MODULE_DIR$/config.json" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/get_ip_user_agent.py">
       <sourceFolder url="file://$MODULE_DIR$/get_ip_user_agent.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/get_response.py">
       <sourceFolder url="file://$MODULE_DIR$/get_response.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/ip_user_agent_page.txt">
+      <sourceFolder url="file://$MODULE_DIR$/ip_user_agent_page.txt" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/job-list.csv">
+      <sourceFolder url="file://$MODULE_DIR$/job-list.csv" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/job_page_scrapping.py">
+      <sourceFolder url="file://$MODULE_DIR$/job_page_scrapping.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/practice_get_ip_user_agent.py">
+      <sourceFolder url="file://$MODULE_DIR$/practice_get_ip_user_agent.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/practice_run_glassdoor.py">
+      <sourceFolder url="file://$MODULE_DIR$/practice_run_glassdoor.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/requirements.txt">
       <sourceFolder url="file://$MODULE_DIR$/requirements.txt" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/run_glassdoor.py">
       <sourceFolder url="file://$MODULE_DIR$/run_glassdoor.py" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/utils.py">
       <sourceFolder url="file://$MODULE_DIR$/utils.py" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (JDKE)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
