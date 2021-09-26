@@ -2,10 +2,6 @@
 # https://www.glassdoor.com/Job/berlin-junior-data-analyst-jobs-SRCH_IL.0,6_IC2622109_KO7,26.htm?srs=JOBS_HOME_RECENT_SEARCHES
 # extracted 4 components: company name, position, location, job age(uploaded date)
 
-##reference##
-# https://www.youtube.com/watch?v=3tUUVenpxbc&t=25s
-# https://www.youtube.com/watch?v=XVv6mJpFOb0&t=3445s
-# https://www.youtube.com/watch?v=ng2o98k983k&t=6s
 
 import csv
 import requests
