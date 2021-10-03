@@ -1,7 +1,7 @@
-# JDKE - web scrapping project 
+# JDKE - web scraping project 
 ## Job Description Keyword Extraction 
 
-### this repository is for web crapping project to extract data from web page 
+### this repository is for web craping project to extract data from web page 
 
 
 
